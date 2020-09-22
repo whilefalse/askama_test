@@ -1,3 +1,12 @@
+use askama::Template;
+
+#[derive(Template)]
+#[template(path = "main.html")]
+struct MainTemplate {
+}
+
+
 fn main() {
-    println!("Hello, world!");
+    let template = MainTemplate {};
+    println!("{}", template.render().unwrap());
 }

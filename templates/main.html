@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% import "macro.html" as my_macro %}
+
+{% block content %}
+    This is main.html content block
+    main.html is about to call the macro... {%- call my_macro::my_macro("Inner") -%}
+{% endblock %}
